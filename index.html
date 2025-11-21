@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TestMindLab – QA Portfolio</title>
+
+  <style>
+    /* ====== RESET ====== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Inter", sans-serif;
+      background: #0d0d0d;
+      color: #e6e6e6;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* ====== LOGO / TITULO ====== */
+    h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: #00e5ff;
+      text-shadow: 0 0 12px rgba(0, 229, 255, 0.5);
+      animation: glow 3s ease-in-out infinite;
+    }
+
+    @keyframes glow {
+      0%, 100% { text-shadow: 0 0 12px rgba(0, 229, 255, 0.5); }
+      50% { text-shadow: 0 0 22px rgba(0, 229, 255, 0.9); }
+    }
+
+    /* ====== TAGLINE ====== */
+    p {
+      margin-top: 15px;
+      max-width: 600px;
+      font-size: 1.2rem;
+      opacity: 0.85;
+      line-height: 1.4;
+    }
+
+    /* ====== BUTTON ====== */
+    .btn {
+      margin-top: 40px;
+      padding: 12px 28px;
+      background: #0077ff;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.25s ease;
+      text-decoration: none;
+      display: inline-block;
+      box-shadow: 0 0 10px rgba(0, 119, 255, 0.4);
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 20px rgba(0, 119, 255, 0.9);
+    }
+
+    /* ====== FOOTER ====== */
+    footer {
+      position: absolute;
+      bottom: 20px;
+      font-size: 0.9rem;
+      opacity: 0.5;
+    }
+
+  </style>
+
+</head>
+<body>
+
+  <h1>TEST MIND LAB</h1>
+
+  <p>
+    Quality Through Curiosity.<br>
+    Exploratory Testing · Automation · SQL · API Testing.
+    <br>
+    Breaking things to make them better.
+  </p>
+
+  <a class="btn" href="#work">See My Work</a>
+
+  <footer>
+    © 2025 TestMindLab · Built by Adalberto Parra
+  </footer>
+
+</body>
+</html>
