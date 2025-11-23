@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cypress Automation Suite – TestMindLab</title>
+
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="icon" href="../assets/img/tml-favicon.ico" />
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <img src="../assets/img/logo-premium.png" alt="Logo TML" class="nav-logo" />
+      <span class="nav-title">TestMindLab</span>
+    </div>
+
+    <div class="nav-links">
+      <a href="../index.html">Inicio</a>
+      <a href="#overview">Resumen</a>
+      <a href="#structure">Estructura</a>
+      <a href="#gallery">Galería</a>
+    </div>
+  </nav>
+
+  <!-- HERO PEQUEÑO -->
+  <header class="sub-hero fade-section">
+    <h1>Cypress Automation Suite</h1>
+    <p class="sub-hero-desc">
+      Suite de automatizaciones profesional diseñada para pruebas E2E, UI y API sobre SQL Mind Trainer.
+    </p>
+  </header>
+
+  <!-- ==========================
+       RESUMEN
+  =========================== -->
+  <section id="overview" class="sub-section fade-section">
+    <h2>Descripción General</h2>
+    <p class="sub-text">
+      Esta suite Cypress valida flujos reales del usuario dentro de SQL Mind Trainer: autenticación, navegación de
+      niveles,
+      progreso, ranking, validación SQL, errores y respuestas esperadas.
+    </p>
+  </section>
+
+  <!-- ==========================
+       TIPOS DE PRUEBAS
+  =========================== -->
+  <section class="sub-section fade-section">
+    <h2>Tipos de Pruebas</h2>
+
+    <ul class="sub-list">
+      <li><strong>E2E Testing:</strong> login, niveles, progreso, ranking.</li>
+      <li><strong>UI Testing:</strong> estados visuales, feedback, errores.</li>
+      <li><strong>API Testing:</strong> validación contra endpoints Supabase.</li>
+      <li><strong>Regresión:</strong> flujos críticos de usuario.</li>
+      <li><strong>Fixtures:</strong> escenarios controlados y mockeados.</li>
+    </ul>
+  </section>
+
+  <!-- ==========================
+       ESTRUCTURA CYPRESS
+  =========================== -->
+  <section id="structure" class="sub-section fade-section">
+    <h2>Estructura del Proyecto</h2>
+
+    <pre class="code-block">
+/cypress
+  /e2e
+    login.cy.js
+    play-level.cy.js
+    progress.cy.js
+
+  /fixtures
+    user.json
+    level1.json
+
+  /support
+    commands.js
+    e2e.js
+    </pre>
+
+    <p class="sub-text">
+      La estructura está organizada siguiendo buenas prácticas:
+      pruebas atómicas, soportes reutilizables y fixtures limpias para reproducibilidad.
+    </p>
+  </section>
+
+  <!-- ==========================
+       GALERÍA CYPRESS
+  =========================== -->
+  <section id="gallery" class="sub-section fade-section">
+    <h2>Galería de Automatizaciones</h2>
+
+    <div class="gallery">
+      <img src="../assets/img/cypress1.png" alt="Cypress 1" />
+      <img src="../assets/img/cypress2.png" alt="Cypress 2" />
+      <img src="../assets/img/cypress3.png" alt="Cypress 3" />
+    </div>
+
+    <a href="https://github.com/aparraut/sql-mind-trainer-cypress" class="btn-secondary" target="_blank">
+      Ver repositorio →
+    </a>
+
+  </section>
+
+  <!-- ==========================
+       FOOTER
+  =========================== -->
+  <footer>
+    <p>© 2025 TestMindLab — Adalberto Parra</p>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SQL Mind Trainer – Case Study</title>
+
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="icon" href="../assets/img/tml-favicon.ico" />
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <img src="../assets/img/logo-premium.png" alt="Logo TML" class="nav-logo" />
+      <span class="nav-title">TestMindLab</span>
+    </div>
+
+    <div class="nav-links">
+      <a href="../index.html">Inicio</a>
+      <a href="#overview">Resumen</a>
+      <a href="#automation">Automatización</a>
+      <a href="#contact">Contacto</a>
+    </div>
+  </nav>
+
+  <!-- HERO PEQUEÑO -->
+  <header class="sub-hero fade-section">
+    <h1>SQL Mind Trainer</h1>
+    <p class="sub-hero-desc">
+      Case Study técnico — Plataforma diseñada como entorno real de validación SQL y automatización con Cypress.
+    </p>
+  </header>
+
+  <!-- ==========================
+       RESUMEN
+  =========================== -->
+  <section id="overview" class="sub-section fade-section">
+    <h2>Resumen del Proyecto</h2>
+    <p class="sub-text">
+      SQL Mind Trainer es una plataforma creada para practicar SQL y validar consultas de forma interactiva mediante un
+      sistema de niveles progresivos. Su diseño permite integrarlo con flujos reales de pruebas automatizadas.
+    </p>
+  </section>
+
+  <!-- ==========================
+       OBJETIVOS
+  =========================== -->
+  <section class="sub-section fade-section">
+    <h2>Objetivos Técnicos</h2>
+    <ul class="sub-list">
+      <li>Crear un entorno replicable para validación SQL.</li>
+      <li>Integrarlo con suites E2E, UI y API.</li>
+      <li>Permitir flujos de autenticación, progreso y ranking.</li>
+      <li>Construir una base real para pruebas automatizadas con Cypress.</li>
+    </ul>
+  </section>
+
+  <!-- ==========================
+       ARQUITECTURA
+  =========================== -->
+  <section class="sub-section fade-section">
+    <h2>Arquitectura del Proyecto</h2>
+    <ul class="sub-list">
+      <li><strong>Frontend:</strong> HTML, CSS, JavaScript.</li>
+      <li><strong>Backend:</strong> Supabase (auth, DB, RLS).</li>
+      <li><strong>Validación:</strong> Motor de comparación SQL.</li>
+      <li><strong>Automatización:</strong> Cypress (E2E, UI, API).</li>
+    </ul>
+  </section>
+
+  <!-- ==========================
+       AUTOMATIZACIÓN
+  =========================== -->
+  <section id="automation" class="sub-section fade-section">
+    <h2>Automatización con Cypress</h2>
+    <p class="sub-text">
+      SQL Mind Trainer funciona como entorno real para pruebas E2E donde se validan flujos completos de usuario,
+      incluyendo niveles, progreso, ranking y validaciones SQL.
+    </p>
+
+    <ul class="sub-list">
+      <li>Validación de respuestas SQL.</li>
+      <li>Flujos de autenticación y sesión.</li>
+      <li>Pruebas UI sobre feedback y navegación.</li>
+      <li>API Testing de Supabase.</li>
+      <li>Fixtures y ambientes controlados.</li>
+    </ul>
+  </section>
+
+  <!-- ==========================
+       GALERÍA
+  =========================== -->
+  <section class="sub-section fade-section">
+    <h2>Galería Cypress</h2>
+
+    <div class="gallery">
+      <img src="../assets/img/cypress1.png" alt="Test Cypress 1" />
+      <img src="../assets/img/cypress2.png" alt="Test Cypress 2" />
+      <img src="../assets/img/cypress3.png" alt="Test Cypress 3" />
+    </div>
+
+    <a href="https://sqlmindtrainer.vercel.app" target="_blank" class="btn-primary">
+      Abrir Demo Real →
+    </a>
+  </section>
+
+  <!-- ==========================
+       FOOTER
+  =========================== -->
+  <footer>
+    <p>© 2025 TestMindLab — Adalberto Parra</p>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+
+</html>
