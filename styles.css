@@ -42,7 +42,7 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  height: 64px;
+  height: 58px;
   background: var(--bg-dark);
   display: flex;
   align-items: center;
@@ -52,6 +52,15 @@ body {
   border-bottom: 1px solid #1a1f24;
   backdrop-filter: blur(10px);
 }
+
+.navbar {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.btn-primary {
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.25);
+}
+
 
 .nav-left {
   display: flex;
@@ -80,6 +89,11 @@ body {
 .nav-links a:hover {
   color: var(--blue-light);
 }
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+}
+
 
 /* =====================================================
    HERO
@@ -160,7 +174,7 @@ body {
    SECCIONES
 ===================================================== */
 .section {
-  padding: 100px 10%;
+  padding: 120px 10%;
   text-align: center;
 }
 
@@ -188,6 +202,7 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
   gap: 15px;
+
 }
 
 .skills-grid span {
@@ -198,12 +213,16 @@ body {
   font-size: 0.95rem;
   color: var(--text-soft);
   transition: var(--transition);
+  transition: all 0.25s ease;
+
 }
 
 .skills-grid span:hover {
-  background: var(--bg-hover);
-  color: var(--blue-light);
+  background: rgba(59, 130, 246, 0.1);
+  border-color: rgba(59, 130, 246, 0.3);
+  transform: translateY(-2px);
 }
+
 
 /* =====================================================
    EXPERIENCIA
@@ -271,7 +290,9 @@ footer {
 .fade-section {
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
+  transition: opacity .9s cubic-bezier(0.16, 1, 0.3, 1),
+    transform .9s cubic-bezier(0.16, 1, 0.3, 1);
+
 }
 
 .fade-section.visible {
@@ -284,8 +305,11 @@ footer {
 ===================================================== */
 @media (max-width: 768px) {
   .hero-content h1 {
-    font-size: 2.2rem;
+    font-size: 3rem;
+    letter-spacing: -1px;
+    /* Más moderno */
   }
+
 
   .hero-logo {
     width: 110px;
@@ -295,17 +319,17 @@ footer {
     padding: 0 5%;
   }
 }
+
 #hero {
   --mouse-x: 50%;
   --mouse-y: 50%;
   background:
-    radial-gradient(
-      circle at var(--mouse-x) var(--mouse-y),
+    radial-gradient(circle at var(--mouse-x) var(--mouse-y),
       rgba(59, 130, 246, 0.12),
-      transparent 60%
-    ),
+      transparent 60%),
     var(--bg);
 }
+
 /* =====================================================
    SUBPÁGINAS — HERO PEQUEÑO
 ===================================================== */
@@ -320,9 +344,12 @@ footer {
   font-size: 2.4rem;
   margin-bottom: 10px;
   font-weight: 700;
-  background: linear-gradient(to right, var(--blue-light), #ffffff);
+  background: linear-gradient(90deg, #60a5fa, #93c5fd);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  letter-spacing: -0.5px;
+  font-weight: 700;
+
 }
 
 .sub-hero-desc {
@@ -413,7 +440,7 @@ footer {
 .gallery img {
   width: 100%;
   border-radius: var(--radius);
-  border: 1px solid #1a1f24;
+  border: 1px solid rgba(255, 255, 255, 0.05);
   transition: var(--transition);
 }
 
@@ -434,7 +461,8 @@ footer {
   text-align: center;
   margin-top: 40px;
   border-top: 1px solid #1a1f24;
-  font-size: 0.85rem;
+  font-size: .82rem;
+  opacity: .75;
   color: var(--text-muted);
 }
 
