@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SQL Mind Trainer – Case Study</title>
 
+  <meta name="description"
+    content="Case study técnico del proyecto SQL Mind Trainer creado por Adalberto Parra: plataforma de validación SQL con niveles, progreso, ranking y automatización E2E con Cypress.">
+
   <link rel="stylesheet" href="../styles.css" />
   <link rel="icon" href="../assets/img/tml-favicon.ico" />
 </head>
@@ -22,16 +25,19 @@
     <div class="nav-links">
       <a href="../index.html">Inicio</a>
       <a href="#overview">Resumen</a>
+      <a href="#objectives">Objetivos</a>
+      <a href="#architecture">Arquitectura</a>
       <a href="#automation">Automatización</a>
-      <a href="#contact">Contacto</a>
+      <a href="#gallery">Galería</a>
     </div>
   </nav>
 
   <!-- HERO PEQUEÑO -->
   <header class="sub-hero fade-section">
-    <h1>SQL Mind Trainer</h1>
+    <h1 style="font-size: clamp(1.8rem, 4vw, 2.6rem);">SQL Mind Trainer</h1>
     <p class="sub-hero-desc">
-      Case Study técnico — Plataforma diseñada como entorno real de validación SQL y automatización con Cypress.
+      Plataforma para practicar SQL y validar lógica usando niveles, progreso y ranking.  
+      Base real para suites E2E con Cypress.
     </p>
   </header>
 
@@ -40,36 +46,48 @@
   =========================== -->
   <section id="overview" class="sub-section fade-section">
     <h2>Resumen del Proyecto</h2>
+
     <p class="sub-text">
-      SQL Mind Trainer es una plataforma creada para practicar SQL y validar consultas de forma interactiva mediante un
-      sistema de niveles progresivos. Su diseño permite integrarlo con flujos reales de pruebas automatizadas.
+      SQL Mind Trainer permite resolver desafíos SQL mediante un sistema progresivo de niveles.
+      Cada nivel evalúa consultas reales y compara la respuesta con una solución esperada.
+    </p>
+
+    <p class="sub-text">
+      Fue diseñado como entorno de testing controlado, ideal para automatización E2E, UI y API.
     </p>
   </section>
 
   <!-- ==========================
-       OBJETIVOS
+       OBJETIVOS TÉCNICOS
   =========================== -->
-  <section class="sub-section fade-section">
+  <section id="objectives" class="sub-section fade-section">
     <h2>Objetivos Técnicos</h2>
-    <ul class="sub-list">
-      <li>Crear un entorno replicable para validación SQL.</li>
-      <li>Integrarlo con suites E2E, UI y API.</li>
-      <li>Permitir flujos de autenticación, progreso y ranking.</li>
-      <li>Construir una base real para pruebas automatizadas con Cypress.</li>
+
+    <ul class="sub-list enhanced-list">
+      <li>✔ Crear un entorno replicable para practicar SQL.</li>
+      <li>✔ Modelar niveles, progreso y ranking en supabase.</li>
+      <li>✔ Permitir autenticación real y persistencia.</li>
+      <li>✔ Integrarse con Cypress para automatización completa.</li>
     </ul>
   </section>
 
   <!-- ==========================
        ARQUITECTURA
   =========================== -->
-  <section class="sub-section fade-section">
+  <section id="architecture" class="sub-section fade-section">
     <h2>Arquitectura del Proyecto</h2>
-    <ul class="sub-list">
-      <li><strong>Frontend:</strong> HTML, CSS, JavaScript.</li>
-      <li><strong>Backend:</strong> Supabase (auth, DB, RLS).</li>
-      <li><strong>Validación:</strong> Motor de comparación SQL.</li>
+
+    <ul class="sub-list enhanced-list">
+      <li><strong>Frontend:</strong> JS vanilla + HTML + CSS.</li>
+      <li><strong>Backend:</strong> Supabase (Auth + DB + RLS).</li>
+      <li><strong>Motor SQL:</strong> comparación de query vs solución esperada.</li>
       <li><strong>Automatización:</strong> Cypress (E2E, UI, API).</li>
     </ul>
+
+    <p class="sub-text">
+      La arquitectura prioriza consistencia y capacidad de reproducir escenarios
+      con precisión para testing avanzado.
+    </p>
   </section>
 
   <!-- ==========================
@@ -77,33 +95,34 @@
   =========================== -->
   <section id="automation" class="sub-section fade-section">
     <h2>Automatización con Cypress</h2>
+
     <p class="sub-text">
-      SQL Mind Trainer funciona como entorno real para pruebas E2E donde se validan flujos completos de usuario,
-      incluyendo niveles, progreso, ranking y validaciones SQL.
+      El proyecto sirve como sandbox real para pruebas automatizadas,
+      validando autenticación, navegación, progreso, ranking y respuestas SQL.
     </p>
 
-    <ul class="sub-list">
-      <li>Validación de respuestas SQL.</li>
-      <li>Flujos de autenticación y sesión.</li>
-      <li>Pruebas UI sobre feedback y navegación.</li>
-      <li>API Testing de Supabase.</li>
-      <li>Fixtures y ambientes controlados.</li>
+    <ul class="sub-list enhanced-list">
+      <li>✔ Validación de respuestas SQL.</li>
+      <li>✔ Pruebas de sesión: login / logout.</li>
+      <li>✔ Navegación UI + feedback al usuario.</li>
+      <li>✔ API Testing sobre endpoints Supabase.</li>
+      <li>✔ Fixtures para reproducir escenarios complejos.</li>
     </ul>
   </section>
 
   <!-- ==========================
        GALERÍA
   =========================== -->
-  <section class="sub-section fade-section">
-    <h2>Galería Cypress</h2>
+  <section id="gallery" class="sub-section fade-section">
+    <h2>Galería</h2>
 
-    <div class="gallery">
-      <img src="../assets/img/cypress1.png" alt="Test Cypress 1" />
-      <img src="../assets/img/cypress2.png" alt="Test Cypress 2" />
-      <img src="../assets/img/cypress3.png" alt="Test Cypress 3" />
+    <div class="gallery gallery-rounded">
+      <img src="../assets/img/sqlmind-preview.png" alt="SQL Main preview" />
+      <img src="../assets/img/cypress-preview.png" alt="Cypress automation preview" />
+      <img src="../assets/img/cypress1.png" alt="Detalle de Cypress" />
     </div>
 
-    <a href="https://sqlmindtrainer.vercel.app" target="_blank" class="btn-primary">
+    <a href="https://sqlmindtrainer.vercel.app" target="_blank" class="btn-primary" style="margin-top: 35px;">
       Abrir Demo Real →
     </a>
   </section>
@@ -111,8 +130,22 @@
   <!-- ==========================
        FOOTER
   =========================== -->
-  <footer>
-    <p>© 2025 TestMindLab — Adalberto Parra</p>
+  <footer class="footer-pro">
+    <div class="footer-content">
+      <div class="footer-name">
+        <h3>Adalberto Parra</h3>
+        <p>QA Automation Engineer</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://github.com/aparraut" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/in/tuusuario" target="_blank">LinkedIn</a>
+        <a href="mailto:tuemail@ejemplo.com">Email</a>
+      </div>
+      <div class="footer-meta">
+        <span>Uruguay · Remoto LATAM / USA</span>
+        <span>© 2025 TestMindLab</span>
+      </div>
+    </div>
   </footer>
 
   <script src="../script.js"></script>

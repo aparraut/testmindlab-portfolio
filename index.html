@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="es">
 
 <head>
@@ -14,11 +13,15 @@
   <link rel="stylesheet" href="styles.css" />
 
   <!-- Favicon -->
-  <link rel="icon" href="assets/img/tml-favicon.ico" type="image/x-icon" />
-
+  <link rel="icon" type="image/x-icon" href="assets/img/tml-favicon.ico" />
 </head>
 
 <body>
+
+  <!-- ==========================
+       HEADER SUPERIOR (logo circular)
+  =========================== -->
+
 
   <!-- ==========================
        NAVBAR FIJO
@@ -38,131 +41,338 @@
   </nav>
 
   <!-- ==========================
-       HERO
-  =========================== -->
+     HERO — Senior QA Version
+=========================== -->
   <header id="hero" class="hero-section fade-section">
-    <div class="hero-content">
+    <div class="hero-container">
 
-      <img src="assets/img/logo-premium.png" alt="Logo" class="hero-logo" />
+      <!-- COLUMNA IZQUIERDA -->
+      <div class="hero-left">
+        <h1 class="hero-title">QA Automation Engineer</h1>
 
-      <h1>QA Automation Engineer</h1>
-      <p class="hero-sub">Cypress • API Testing • SQL • E2E • Postman • GitHub</p>
+        <p class="hero-subtitle">
+          Especializado en pruebas E2E, API Testing y automatización de flujos críticos.
+        </p>
 
-      <p class="hero-desc">Automatizo flujos reales, diseño entornos de prueba y desarrollo soluciones técnicas
-        enfocadas en calidad.</p>
+        <!-- BADGES -->
+        <div class="tech-badges">
+          <span>Cypress</span>
+          <span>Postman</span>
+          <span>SQL</span>
+          <span>Supabase</span>
+          <span>GitHub</span>
+        </div>
 
-      <div class="hero-buttons">
-        <a href="#sql-mini" class="btn-primary">Ver Proyectos</a>
-        <a href="#cypress-suite" class="btn-secondary">Automatizaciones Cypress</a>
+        <div class="hero-buttons">
+          <a href="#sql-mini" class="btn-primary">Ver Proyectos</a>
+          <a href="#cypress-suite" class="btn-secondary">Automatizaciones</a>
+        </div>
       </div>
+
+      <!-- COLUMNA DERECHA -->
+      <div class="hero-right">
+        <div class="hero-logo-wrapper">
+          <img src="assets/img/logo-premium.png" alt="Logo TestMindLab" class="hero-logo-circle" />
+        </div>
+      </div>
+
     </div>
   </header>
 
+
   <!-- ==========================
-       SQL MIND TRAINER (mini)
-  =========================== -->
+     SQL MIND TRAINER — Case Study
+========================== -->
   <section id="sql-mini" class="section fade-section">
     <h2>SQL Mind Trainer</h2>
+
     <p class="section-text">
-      Plataforma creada como entorno controlado para validación SQL y pruebas automatizadas.
-      Utilizada para ejecutar suites reales E2E, UI y API con Cypress sobre autenticación, niveles, progreso y ranking.
+      Plataforma creada como entorno controlado para pruebas técnicas sobre SQL,
+      validación de lógica de negocio y flujos de usuario.
+      Utilizada para ejecutar suites reales E2E y API Testing en escenarios de autenticación,
+      niveles, progreso y ranking.
     </p>
 
-    <a href="projects/sql-mind-trainer.html" class="btn-secondary">Ver Case Study →</a>
-    <a href="https://sqlmindtrainer.vercel.app" target="_blank" class="btn-primary">
-      Abrir Demo Real →
-    </a>
+    <div class="case-card">
 
-  </section>
+      <div class="case-info">
+        <h3>¿Qué valida este proyecto?</h3>
 
-  <!-- ==========================
-       CYPRESS AUTOMATION SUITE
-  =========================== -->
-  <section id="cypress-suite" class="section fade-section">
-    <h2>Cypress Automation Suite</h2>
-    <p class="section-text">
-      Suite de pruebas diseñada para validar flujos completos: autenticación,
-      estados de usuario, lógica interna, manejo de errores y API Testing contra Supabase.
-    </p>
+        <ul class="enhanced-list">
+          <li>Autenticación y manejo de sesiones</li>
+          <li>Ejecución y validación de consultas SQL</li>
+          <li>Lógica de niveles y desbloqueo progresivo</li>
+          <li>Guardado de progreso y ranking dinámico</li>
+          <li>Integración completa con Supabase (Auth + DB)</li>
+        </ul>
 
-    <a href="projects/cypress-automation.html" class="btn-secondary">Ver Automatizaciones →</a>
-    <a href="https://github.com/aparraut/sql-mind-trainer-cypress" class="btn-secondary" target="_blank">
-      Ver pruebas Cypress →
-    </a>
-  </section>
+        <div class="case-buttons">
+          <a href="projects/sql-mind-trainer.html" class="btn-secondary">Ver Case Study →</a>
+          <a href="https://sqlmindtrainer.vercel.app" target="_blank" class="btn-primary">Abrir Demo Real →</a>
+        </div>
+      </div>
 
-  <!-- ==========================
-       SKILLS
-  =========================== -->
-  <section id="skills" class="section fade-section">
-    <h2>Habilidades Clave</h2>
-    <div class="skills-grid">
-      <span>Testing Funcional</span>
-      <span>E2E</span>
-      <span>Cypress Automation</span>
-      <span>API Testing</span>
-      <span>Postman</span>
-      <span>SQL</span>
-      <span>Git & GitHub</span>
-      <span>CI/CD Básico</span>
+      <div class="case-image">
+        <img src="assets/img/sqlmind-preview.png" alt="SQL Mind Trainer preview" />
+      </div>
+
     </div>
   </section>
 
+
   <!-- ==========================
-       EXPERIENCIA
-  =========================== -->
+     CYPRESS AUTOMATION SUITE
+========================== -->
+  <section id="cypress-suite" class="section fade-section">
+    <h2>Cypress Automation Suite</h2>
+
+    <p class="section-text">
+      Suite de pruebas desarrollada para validar flujos críticos de la plataforma:
+      autenticación, API Testing, lógica interna, integridad de datos y estados de usuario.
+      Todo ejecutado sobre Supabase + CI.
+    </p>
+
+    <div class="case-card">
+
+      <div class="case-info">
+        <h3>Automatizaciones incluidas</h3>
+
+        <ul class="enhanced-list">
+          <li>Login / logout / recuperación de cuenta</li>
+          <li>Pruebas E2E de niveles, progreso y ranking</li>
+          <li>API Testing con intercepts + fixtures dinámicos</li>
+          <li>Validación de estados, errores y respuestas REST</li>
+          <li>Integración con Supabase (Auth, Row Level Data)</li>
+        </ul>
+
+        <div class="case-buttons">
+          <a href="projects/cypress-automation.html" class="btn-secondary">Ver Automatizaciones →</a>
+          <a href="https://github.com/aparraut/sql-mind-trainer-cypress" target="_blank" class="btn-secondary">
+            Repositorio Cypress →
+          </a>
+        </div>
+      </div>
+
+      <div class="case-image">
+        <img src="assets/img/cypress-preview.png" alt="Cypress automation preview" />
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==========================
+     SKILLS — Senior QA Stack
+========================== -->
+  <section id="skills" class="section fade-section">
+    <h2>Tech Stack</h2>
+    <p class="section-text">
+      Habilidades técnicas desarrolladas en proyectos reales de automatización, testing funcional,
+      E2E, API Testing y validación de sistemas basados en datos.
+    </p>
+
+    <div class="skills-wrapper">
+
+      <!-- AUTOMATION -->
+      <div class="skills-block">
+        <h3>Automation</h3>
+        <div class="skills-list">
+          <span>Cypress</span>
+          <span>Playwright (básico)</span>
+          <span>Postman</span>
+          <span>Newman</span>
+          <span>Mocha / Chai</span>
+        </div>
+      </div>
+
+      <!-- BACKEND & DATA -->
+      <div class="skills-block">
+        <h3>Backend & Data</h3>
+        <div class="skills-list">
+          <span>SQL</span>
+          <span>Supabase</span>
+          <span>REST APIs</span>
+          <span>Autenticación / JWT</span>
+          <span>DBeaver</span>
+        </div>
+      </div>
+
+      <!-- TOOLS -->
+      <div class="skills-block">
+        <h3>Tools</h3>
+        <div class="skills-list">
+          <span>Git & GitHub</span>
+          <span>CI/CD</span>
+          <span>VS Code</span>
+          <span>Docker (básico)</span>
+          <span>Linux / Bash</span>
+        </div>
+      </div>
+
+      <!-- QA MINDSET -->
+      <div class="skills-block">
+        <h3>QA Mindset</h3>
+        <div class="skills-list">
+          <span>Testing Funcional</span>
+          <span>Regression Strategy</span>
+          <span>Exploratory Testing</span>
+          <span>Test Design</span>
+          <span>Bug Reporting</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==========================
+     EXPERIENCIA — Senior QA
+========================== -->
   <section id="experience" class="section fade-section">
-    <h2>Experiencia</h2>
+    <h2>Experiencia Profesional</h2>
 
     <div class="experience-card">
-      <h3>QA Tester — CodeLight</h3>
-      <span class="exp-time">2023 – Actualidad</span>
 
-      <ul>
-        <li>Pruebas smoke, regresión y UAT.</li>
-        <li>Automatización con Cypress (UI + API).</li>
-        <li>API Testing con Postman.</li>
-        <li>Gestión de repos y ramas en GitHub.</li>
-        <li>Participación activa en SCRUM.</li>
+      <h3>QA Tester / QA Automation — CodeLight</h3>
+      <span class="exp-time">2023 – Actualidad · Uruguay · Remoto</span>
+
+      <p class="exp-summary">
+        Responsable de diseñar, ejecutar y automatizar estrategias de testing para sistemas de gestión,
+        logística y plataformas web usadas en entornos reales de producción.
+      </p>
+
+      <ul class="exp-list">
+        <li>
+          Implementé una suite de automatización con Cypress (UI + API), reduciendo el tiempo de validación
+          de releases en un <strong>60%</strong>.
+        </li>
+
+        <li>
+          Diseñé flujos de pruebas E2E sobre autenticación, manejo de estados y procesos críticos en
+          sistemas basados en <strong>Supabase</strong>.
+        </li>
+
+        <li>
+          Desarrollé pruebas de API con Postman/Newman para validar integridad de datos, seguridad y
+          consistencia en respuestas REST.
+        </li>
+
+        <li>
+          Detecté errores clave en funcionalidades de alto impacto, reduciendo el bug leakage en un
+          <strong>40%</strong> a través de estrategias de regresión.
+        </li>
+
+        <li>
+          Construí herramientas internas y entornos controlados para testing, como <strong>SQL Mind Trainer</strong>,
+          permitiendo pruebas automatizadas sobre datos y lógica de negocio.
+        </li>
+
+        <li>
+          Participación activa en SCRUM (dailies, refinamientos y sprint planning), colaborando directo
+          con desarrolladores y product owners.
+        </li>
       </ul>
     </div>
   </section>
 
+
   <!-- ==========================
-       SOBRE MÍ
-  =========================== -->
+     SOBRE MÍ — Senior QA
+========================== -->
   <section id="about" class="section fade-section">
     <h2>Sobre mí</h2>
-    <p class="section-text">
-      QA Automation Engineer con enfoque en calidad, eficiencia y diseño de pruebas mantenibles.
-      Me especializo en automatización de flujos reales, API testing y validación de sistemas basados en datos.
+
+    <p class="about-text">
+      Soy QA Automation Engineer con experiencia en el diseño de estrategias de testing,
+      automatización de flujos E2E y validación de APIs en entornos basados en datos.
+      Me especializo en crear pruebas mantenibles, detectar inconsistencias de forma temprana
+      y asegurar la calidad de sistemas que procesan información crítica.
+    </p>
+
+    <p class="about-text">
+      Trabajo con Cypress, Postman, SQL y Supabase para automatizar procesos reales,
+      combinando pruebas funcionales, regresión y análisis técnico.
+      Me enfoco en la eficiencia, la precisión y la comunicación clara dentro del equipo.
+    </p>
+
+    <p class="about-text">
+      Disfruto crear herramientas internas que facilitan el testing —como SQL Mind Trainer—,
+      así como entornos controlados para pruebas complejas.
+      Mi objetivo es aportar calidad, previsibilidad y velocidad a cada release.
     </p>
   </section>
 
+
   <!-- ==========================
-       CONTACTO
-  =========================== -->
+     CONTACTO — Versión Pro
+========================== -->
   <section id="contacto" class="section fade-section">
     <h2>Contacto</h2>
-    <p class="section-text">Podés contactarme por cualquiera de estos medios:</p>
+    <p class="section-text">
+      Si querés revisar mi trabajo más en detalle o hablar sobre oportunidades,
+      estos son mis canales principales:
+    </p>
 
-    <div class="contact-links">
-      <a href="https://github.com/tuusuario" target="_blank">GitHub</a>
-      <a href="https://linkedin.com/in/tuusuario" target="_blank">LinkedIn</a>
-      <a href="mailto:tuemail">Email</a>
+    <div class="contact-grid">
+
+      <!-- GitHub -->
+      <a href="https://github.com/aparraut" target="_blank" class="contact-card">
+        <div class="contact-icon">🐙</div>
+        <div class="contact-info">
+          <span class="contact-label">GitHub</span>
+          <span class="contact-value">github.com/aparraut</span>
+        </div>
+      </a>
+
+      <!-- LinkedIn -->
+      <a href="https://linkedin.com/in/adalberto-parra" target="_blank" class="contact-card">
+        <div class="contact-icon">💼</div>
+        <div class="contact-info">
+          <span class="contact-label">LinkedIn</span>
+          <span class="contact-value">linkedin.com/in/adalberto-parra</span>
+        </div>
+      </a>
+
+      <!-- Email -->
+      <a href="mailto:tuemail@ejemplo.com" class="contact-card">
+        <div class="contact-icon">✉️</div>
+        <div class="contact-info">
+          <span class="contact-label">Email</span>
+          <span class="contact-value">tuemail@ejemplo.com</span>
+        </div>
+      </a>
+
     </div>
   </section>
 
+
   <!-- ==========================
-       FOOTER
-  =========================== -->
-  <footer>
-    <p>© 2025 TestMindLab — Adalberto Parra</p>
+     FOOTER — Profesional
+========================== -->
+  <footer class="footer-pro">
+    <div class="footer-content">
+
+      <div class="footer-name">
+        <h3>Adalberto Parra</h3>
+        <p>QA Automation Engineer</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="https://github.com/aparraut" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/in/adalberto-parra" target="_blank">LinkedIn</a>
+        <a href="mailto:tuemail@ejemplo.com">Email</a>
+      </div>
+
+      <div class="footer-meta">
+        <span>Uruguay · Remoto LATAM / USA</span>
+        <span>© 2025 TestMindLab</span>
+      </div>
+
+    </div>
   </footer>
 
-  <script src="script.js"></script>
 
+  <script src="script.js"></script>
 </body>
 
 </html>
-

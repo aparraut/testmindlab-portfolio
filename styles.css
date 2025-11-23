@@ -61,7 +61,6 @@ body {
   box-shadow: 0 0 10px rgba(59, 130, 246, 0.25);
 }
 
-
 .nav-left {
   display: flex;
   align-items: center;
@@ -94,49 +93,138 @@ body {
   transform: translateY(-1px);
 }
 
+/* ==========================
+   HERO — Senior QA Version
+========================== */
 
-/* =====================================================
-   HERO
-===================================================== */
 .hero-section {
-  padding: 160px 10% 120px;
-  text-align: center;
+  padding: 150px 10% 100px;
   background: var(--bg);
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
 }
 
-.hero-logo {
-  width: 130px;
-  margin-bottom: 20px;
+/* CONTENEDOR 2 COLUMNAS */
+.hero-container {
+  width: 100%;
+  max-width: 1300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  margin: auto;
 }
 
-.hero-content h1 {
-  font-size: 2.8rem;
-  margin-bottom: 10px;
+/* COLUMNA IZQUIERDA */
+.hero-left {
+  flex: 1;
+}
+
+.hero-title {
+  font-size: 3rem;
   font-weight: 700;
   background: linear-gradient(to right, var(--blue-light), #ffffff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.hero-sub {
+.hero-subtitle {
+  margin-top: 15px;
   color: var(--text-soft);
-  margin-bottom: 20px;
-  font-size: 1.1rem;
-  font-weight: 400;
+  font-size: 1.2rem;
+  max-width: 500px;
 }
 
-.hero-desc {
-  color: var(--text-muted);
-  font-size: 1.1rem;
-  max-width: 600px;
-  margin: 0 auto;
+/* BADGES */
+.tech-badges {
+  margin: 25px 0 35px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
+.tech-badges span {
+  background: var(--bg-card);
+  padding: 8px 16px;
+  border-radius: 50px;
+  border: 1px solid rgba(59, 130, 246, 0.4);
+  color: var(--blue-light);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* BOTONES */
 .hero-buttons {
-  margin-top: 30px;
+  display: flex;
+  gap: 15px;
+}
+
+/* COLUMNA DERECHA (LOGO) */
+.hero-right {
+  flex: 1;
   display: flex;
   justify-content: center;
-  gap: 15px;
+}
+
+.hero-logo-wrapper {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background: radial-gradient(circle,
+      rgba(59, 130, 246, 0.25),
+      rgba(59, 130, 246, 0.05),
+      transparent 70%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: glow-pulse 4s ease-in-out infinite;
+}
+
+/* LOGO CIRCULAR */
+.hero-logo-circle {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(59, 130, 246, 0.4);
+  box-shadow: 0 0 25px rgba(59, 130, 246, 0.3);
+}
+
+/* ANIMACIÓN SUAVE */
+@keyframes glow-pulse {
+  0% {
+    transform: scale(1);
+    opacity: .9;
+  }
+
+  50% {
+    transform: scale(1.04);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: .9;
+  }
+}
+
+/* ==========================
+   RESPONSIVE HERO
+========================== */
+@media (max-width: 900px) {
+  .hero-container {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .hero-left {
+    margin-top: 30px;
+  }
+
+  .hero-right {
+    justify-content: center;
+  }
 }
 
 /* =====================================================
@@ -202,7 +290,6 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
   gap: 15px;
-
 }
 
 .skills-grid span {
@@ -214,7 +301,6 @@ body {
   color: var(--text-soft);
   transition: var(--transition);
   transition: all 0.25s ease;
-
 }
 
 .skills-grid span:hover {
@@ -222,7 +308,6 @@ body {
   border-color: rgba(59, 130, 246, 0.3);
   transform: translateY(-2px);
 }
-
 
 /* =====================================================
    EXPERIENCIA
@@ -255,6 +340,57 @@ body {
   line-height: 1.8;
 }
 
+/* ==========================
+   EXPERIENCIA — Senior QA
+========================== */
+
+.experience-card {
+  background: var(--bg-card);
+  max-width: 850px;
+  margin: 40px auto 0;
+  padding: 45px;
+  border-radius: var(--radius);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  text-align: left;
+  transition: 0.3s ease;
+}
+
+.experience-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(59, 130, 246, 0.25);
+  box-shadow: 0 0 25px rgba(59, 130, 246, 0.15);
+}
+
+.exp-time {
+  font-size: 0.95rem;
+  color: var(--blue-light);
+  margin-bottom: 18px;
+  display: block;
+}
+
+.exp-summary {
+  color: var(--text-soft);
+  margin-bottom: 20px;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.exp-list {
+  color: var(--text-soft);
+  margin-left: 20px;
+  line-height: 1.8;
+  font-size: 1rem;
+}
+
+.exp-list li {
+  margin-bottom: 12px;
+}
+
+.exp-list strong {
+  color: var(--blue-light);
+}
+
+
 /* =====================================================
    CONTACTO
 ===================================================== */
@@ -278,10 +414,14 @@ body {
    FOOTER
 ===================================================== */
 footer {
-  text-align: center;
+  background: var(--bg-dark);
   padding: 40px;
+  text-align: center;
+  margin-top: 40px;
+  border-top: 1px solid #1a1f24;
+  font-size: 0.82rem;
+  opacity: 0.75;
   color: var(--text-muted);
-  font-size: 0.85rem;
 }
 
 /* =====================================================
@@ -292,7 +432,6 @@ footer {
   transform: translateY(20px);
   transition: opacity .9s cubic-bezier(0.16, 1, 0.3, 1),
     transform .9s cubic-bezier(0.16, 1, 0.3, 1);
-
 }
 
 .fade-section.visible {
@@ -307,9 +446,7 @@ footer {
   .hero-content h1 {
     font-size: 3rem;
     letter-spacing: -1px;
-    /* Más moderno */
   }
-
 
   .hero-logo {
     width: 110px;
@@ -333,7 +470,6 @@ footer {
 /* =====================================================
    SUBPÁGINAS — HERO PEQUEÑO
 ===================================================== */
-
 .sub-hero {
   padding: 140px 10% 80px;
   text-align: center;
@@ -349,7 +485,6 @@ footer {
   -webkit-text-fill-color: transparent;
   letter-spacing: -0.5px;
   font-weight: 700;
-
 }
 
 .sub-hero-desc {
@@ -359,12 +494,9 @@ footer {
   margin: 0 auto;
 }
 
-
-
 /* =====================================================
    SUBPÁGINAS — SECCIONES
 ===================================================== */
-
 .sub-section {
   padding: 80px 10%;
   max-width: 900px;
@@ -388,12 +520,9 @@ footer {
   margin-bottom: 25px;
 }
 
-
-
 /* =====================================================
    LISTAS PROFESIONALES
 ===================================================== */
-
 .sub-list {
   margin-left: 20px;
   margin-top: 15px;
@@ -405,12 +534,9 @@ footer {
   margin-bottom: 8px;
 }
 
-
-
 /* =====================================================
    CODE BLOCK PREMIUM
 ===================================================== */
-
 .code-block {
   background: #0f1318;
   padding: 22px;
@@ -424,12 +550,9 @@ footer {
   overflow-x: auto;
 }
 
-
-
 /* =====================================================
    GALERÍA CYPRESS
 ===================================================== */
-
 .gallery {
   display: grid;
   gap: 22px;
@@ -449,31 +572,10 @@ footer {
   box-shadow: 0 0 25px rgba(59, 130, 246, 0.25);
 }
 
-
-
-/* =====================================================
-   FOOTER SUBPÁGINAS
-===================================================== */
-
-footer {
-  background: var(--bg-dark);
-  padding: 40px;
-  text-align: center;
-  margin-top: 40px;
-  border-top: 1px solid #1a1f24;
-  font-size: .82rem;
-  opacity: .75;
-  color: var(--text-muted);
-}
-
-
-
 /* =====================================================
    RESPONSIVE SUBPÁGINAS
 ===================================================== */
-
 @media (max-width: 768px) {
-
   .sub-hero {
     padding: 120px 8% 70px;
   }
@@ -493,4 +595,307 @@ footer {
   .code-block {
     font-size: 0.9rem;
   }
+}
+
+/* =====================================================
+   LOGO SUPERIOR CIRCULAR
+===================================================== */
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: none;
+  /* 🔹 sin marco */
+  box-shadow: none;
+  /* 🔹 sin glow */
+}
+
+/* ==========================
+   SKILLS — Senior QA Stack
+========================== */
+
+.skills-wrapper {
+  max-width: 1100px;
+  margin: 40px auto 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 35px;
+}
+
+.skills-block {
+  background: var(--bg-card);
+  padding: 30px;
+  border-radius: var(--radius);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  text-align: left;
+  transition: 0.3s ease;
+}
+
+.skills-block:hover {
+  transform: translateY(-5px);
+  border-color: rgba(59, 130, 246, 0.3);
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.15);
+}
+
+.skills-block h3 {
+  margin-bottom: 18px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--blue-light);
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skills-list span {
+  background: var(--bg-dark);
+  padding: 8px 14px;
+  border-radius: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  font-size: 0.9rem;
+  color: var(--text-soft);
+  transition: 0.25s ease;
+}
+
+.skills-list span:hover {
+  background: rgba(59, 130, 246, 0.1);
+  border-color: rgba(59, 130, 246, 0.25);
+  color: var(--blue-light);
+}
+
+/* ==========================
+   SOBRE MÍ — Senior QA
+========================== */
+
+.about-text {
+  color: var(--text-soft);
+  font-size: 1.1rem;
+  max-width: 850px;
+  margin: 0 auto 22px auto;
+  line-height: 1.75;
+}
+
+/* ==========================
+   CONTACTO — Versión Pro
+========================== */
+
+.contact-grid {
+  max-width: 900px;
+  margin: 35px auto 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 20px;
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  text-decoration: none;
+  transition: 0.25s ease;
+}
+
+.contact-card:hover {
+  border-color: rgba(59, 130, 246, 0.4);
+  box-shadow: 0 0 18px rgba(59, 130, 246, 0.18);
+  transform: translateY(-3px);
+}
+
+.contact-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(59, 130, 246, 0.15);
+  font-size: 1.4rem;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-label {
+  font-size: 0.95rem;
+  color: var(--text-soft);
+}
+
+.contact-value {
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+/* ==========================
+   FOOTER — Profesional
+========================== */
+
+.footer-pro {
+  background: var(--bg-dark);
+  padding: 50px 10%;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  margin-top: 70px;
+}
+
+.footer-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+/* Nombre + Rol */
+.footer-name h3 {
+  font-size: 1.4rem;
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+
+.footer-name p {
+  font-size: 0.95rem;
+  color: var(--text-soft);
+}
+
+/* Links */
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.footer-links a {
+  color: var(--blue-light);
+  font-size: 0.95rem;
+  transition: 0.25s ease;
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+  text-shadow: 0 0 8px rgba(59, 130, 246, 0.4);
+}
+
+/* Meta */
+.footer-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.footer-meta span {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .footer-links {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+/* ==========================
+   CASE STUDY CARDS
+========================== */
+
+.case-card {
+  max-width: 1100px;
+  margin: 50px auto 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  background: var(--bg-card);
+  padding: 40px;
+  border-radius: var(--radius);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: 0.3s ease;
+}
+
+.case-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(59, 130, 246, 0.35);
+  box-shadow: 0 0 25px rgba(59, 130, 246, 0.15);
+}
+
+.case-info h3 {
+  font-size: 1.4rem;
+  color: var(--blue-light);
+  margin-bottom: 12px;
+}
+
+.case-list {
+  margin-left: 18px;
+  margin-bottom: 22px;
+  color: var(--text-soft);
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+.case-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.case-image img {
+  width: 100%;
+  border-radius: var(--radius);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.15);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .case-card {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .case-buttons {
+    justify-content: center;
+  }
+}
+/* LISTAS CON CHECK CENTRADAS Y PEGADAS AL TEXTO */
+.enhanced-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 18px auto 0 auto;     /* centramos el bloque */
+  display: inline-flex;          /* bloque compacto centrado */
+  flex-direction: column;
+  gap: 6px;                      /* separación vertical entre items */
+}
+
+.enhanced-list li {
+  display: inline-flex;          /* cada item es una fila: ✔ + texto */
+  align-items: flex-start;
+  gap: 16px;                      /* distancia mínima entre ✔ y texto */
+  line-height: 1.5;
+  text-align: left;              /* para que el texto del item no se vea raro */
+}
+
+.enhanced-list li::before {
+  content: "✔";
+  color: var(--blue-light);
+  font-weight: bold;
+  font-size: 0.9rem;
+  margin-top: 2px;
 }
